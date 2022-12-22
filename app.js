@@ -6,7 +6,7 @@ var express = require("express"),
     ejs = require('ejs')
     app = express();
 
-/*var 
+/*var teste
     ejs.open = '{{'; 
     ejs.close = '}}';
 */
@@ -27,6 +27,8 @@ app.use(express.static(__dirname + "/public"));
 // Responde ao acessar o localhost:3000/
 //app.use("/", function(req, res){res.send("Ola Javaneiros");});
 
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSession({
@@ -35,5 +37,13 @@ app.use(expressSession({
       saveUninitialized: true
 }));
 
+
 // Carrega todas as scripts da pasta controller e routes
 load("controllers") .then("routes") .then("models")  .into(app);
+
+(async () => {
+    const db = require("./db");
+    console.log('Começouuuu');
+    const presentes = await db.selectPresentes();
+    console.log(presentes);
+}) ();

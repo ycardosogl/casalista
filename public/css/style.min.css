@@ -26,8 +26,8 @@ body {
     opacity: .8;
     z-index: -1;
     background: #f12711;
-    background: -webkit-linear-gradient(to right, #f5af19, #f12711);
-    background: linear-gradient(to right, #f5af19, #f12711); }
+    background: -webkit-linear-gradient(to right, #0b73c9, #1f0270);
+    background: linear-gradient(to right, #0b73c9, #1f0270); }
 
 .boxed-page {
   margin: 0 auto;
@@ -372,7 +372,7 @@ a {
     margin-bottom: 0; }
 
 .blog-share-wrapper {
-  float: right;
+  float: none;
   display: inline-block;
   margin: 0 -5px; }
   .blog-share-wrapper .blog-share {
@@ -489,3 +489,9 @@ footer {
     width: 100%; }
   .card-deck {
     flex-direction: column; } }
+
+#hhh{
+  text-align: center;
+  color: white;
+  padding-top:30px;
+}
